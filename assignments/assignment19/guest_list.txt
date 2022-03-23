@@ -1,0 +1,10 @@
+Chloe, True
+Andrew, True
+Morgan, True
+Bailey, False
+Taylor, False
+Amanda, True
+Caitlyn, True
+Jaci, False
+Tyler, True
+Katie, True
