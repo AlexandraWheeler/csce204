@@ -1,0 +1,9 @@
+cornsilk
+red
+lightgreen
+mediumslateblue
+coral
+darkblue
+magenta
+mediumorchid
+lightcyan
