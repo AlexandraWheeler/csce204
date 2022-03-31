@@ -1,0 +1,6 @@
+Car: 2300
+Home: 5600
+School: 1400
+Phone: 540
+Supplies: 230
+Food: 34
