@@ -74,32 +74,27 @@ def guessLetter(x,y):
     global guessedWord
     global wrongAttemptnum
     newGuessedWord = ""
-    wrongPossibility = 0
+    found = False
     outcome = 0
     x = -200
     y = -125
     incorrectLetters = []
     letter = turtle.textinput("Letter Guessing", "Enter a Letter: ")
+    
     for i in range(len(answer)):
-        if answer[i] == letter:
+        if answer[i].lower() == letter.lower():
             newGuessedWord += letter
+            found = True
         else:
             newGuessedWord += guessedWord[i]
-    for i in range(len(answer)):
-        if answer[i] != letter:
-            wrongPossibility += 1
-            incorrectLetters.append(letter)
-            addIncorrect(incorrectLetters[0],x,y)
-            incorrectLetters.clear()
-        else:
-            continue
+
+    if found == False:
+        incorrectLetters.append(letter)
+        addIncorrect(incorrectLetters[0],x,y)
+        incorrectLetters.clear()
         
-
-        
-
-        
-
-
+    guessedWord = newGuessedWord
+    displayWord(guessedWord)
 
 questionList = getQuestions()
 question = random.choice(questionList)
@@ -110,11 +105,9 @@ guessedWord = displayUnderscore(answer)
 displayWord(guessedWord)
 displayIncorrect()
 
-x = 0
-y = 0
 wrongAttemptnum = 0
 
-guessLetter(0,0)
+turtle.onscreenclick(guessLetter)
 
 
 
@@ -129,7 +122,5 @@ turtle.done()
 
 
     
-
-
 
 
